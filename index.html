@@ -1,0 +1,89 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-g">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="app.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+       <script>
+               $(document).ready(function () {
+      $.getJSON("https://dev-util.edyst.com/challenge/pokemons/random", function (data) {
+        
+            $("#card1").css("background-color", data[0].cardColors.bg)
+        $("#tag1").css("background-color", data[0].cardColors.tagbg)
+        $("#data1").css("background-color", data[0].cardColors.textbg)
+        $("#circle1").css("background-color", data[0].cardColors.imgbg)
+        $("#img1").append('<img src="' + data[0].sprite + '" class="card-img-top" title="' + data[0].name + '">')
+        $(".tag1").append('<p>' + data[0].name + '</p>')
+        $(".title1").append('<h4>' + data[0].name + '</h4>')
+        $("#text1").append('<p>' + data[0].description + '</p>')
+
+        $("#card2").css("background-color", data[1].cardColors.bg)
+        $("#tag2").css("background-color", data[1].cardColors.tagbg)
+        $("#data2").css("background-color", data[1].cardColors.textbg)
+        $("#circle2").css("background-color", data[1].cardColors.imgbg)
+        $("#img2").append('<img src="' + data[1].sprite + '" class="card-img-top" title="' + data[1].name + '">')
+        $(".tag2").append('<p>' + data[1].name + '</p>')
+        $(".title2").append('<h4>' + data[1].name + '</h4>')
+        $("#text2").append('<p>' + data[1].description + '</p>')
+
+        $("#card3").css("background-color", data[2].cardColors.bg)
+        $("#tag3").css("background-color", data[2].cardColors.tagbg)
+        $("#data3").css("background-color", data[2].cardColors.textbg)
+        $("#circle3").css("background-color", data[2].cardColors.imgbg)
+        $("#img3").append('<img src="' + data[2].sprite + '" class="card-img-top" title="' + data[2].name + '">')
+        $(".tag3").append('<p>' + data[2].name + '</p>')
+        $(".title3").append('<h4>' + data[2].name + '</h4>')
+        $("#text3").append('<p>' + data[2].description + '</p>')
+      });
+               });
+       </script>
+    </head>
+<body> 
+<div class="bg-fluid">
+    <div class="col1" id="card1">
+        <div class="name" id="tag1">
+            <h4 class="tag1"></h4>
+        </div>
+        <div class="desc" id="data1">
+            <br>
+            <h4 class="title1"></h4>
+            <br>
+            <p id="text1"></p>
+            </div>
+            <div class="img1" id="circle1">
+                 <p id="img1"></p>
+            </div>
+</div>
+<div class="col2" id="card2">
+        <div class="name" id="tag2">
+            <h4 class="tag2"></h4>
+        </div>
+        <div class="desc" id="data2">
+            <br>
+            <h4 class="title2"></h4>
+            <br>
+            <p id="text2"></p>
+            </div>
+            <div class="img2" id="circle2">
+                 <p id="img2"></p>
+            </div>
+</div>
+<div class="col3" id="card3">
+        <div class="name" id="tag3">
+            <h4 class="tag3"></h4>
+        </div>
+        <div class="desc" id="data3">
+            <br>
+            <h4 class="title3"></h4>
+            <br>
+            <p id="text3"></p>
+            </div>
+            <div class="img3" id="circle3">
+                 <p id="img3"></p>
+            </div>
+</div>
+</div>
+</body>
+</html>
